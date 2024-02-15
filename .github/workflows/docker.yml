@@ -31,7 +31,7 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
         
-      - name: Build and push migrator image
+      - name: Build and push workspace image
         uses: docker/build-push-action@v3
         with:
           context: .
