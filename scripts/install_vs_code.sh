@@ -22,7 +22,11 @@ rm vs_code.deb
 apt-get update
 apt-get install -y python3-setuptools \
                    python3-venv \
-                   python3-virtualenv
+                   python3-virtualenv \
+                   python3-pip
+# nodejs
+RUN curl -fsSL https://deb.nodesource.com/setup_21.x | bash -
+RUN apt-get install -y nodejs
 
 # Cleanup for app layer
 chown -R 1000:0 $HOME
